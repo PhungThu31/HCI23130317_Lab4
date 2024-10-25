@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+
+    <nav>
+        <ul>
+            <li><a href="#">Business Operations</a></li>
+            <li><a href="#">Cloud Computing</a></li>
+            <li><a href="#">Cybersecurity</a></li>
+            <li><a href="#">Data Science</a></li>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">IT Operations</a></li>
+            <li><a href="#">Language Learning</a></li>
+            <li><a href="#">Leadership & Management</a></li>
+            <li><a href="#">Marketing</a></li>
+        </ul>
+    </nav>
+
+
+    <header>
+        <div class="welcome-section">
+            <div class="avatar" aria-label="User Initials">T</div>
+            <div>
+                <h2>Welcome back, Phùng Thị Minh Thư</h2>
+                <a href="#">Add occupation and interests</a>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="streak-section">
+            <div class="info-icon">
+                <i class="fas fa-info-circle" aria-hidden="true"></i>
+            </div>
+            <div class="weekly-streak">
+                <h2>Weekly streak</h2>
+                <p>One ring down, one to go. Keep it up!</p>
+            </div>
+            <div class="current-streak" aria-label="Current streak">
+                <i class="fas fa-fire" aria-hidden="true"></i>
+                <div>
+                    <p><span class="streak-number">2</span> week</p>
+                    <p class="streak-label">Current streak</p>
+                </div>
+            </div>                            
+            <div class="activity-summary" aria-label="Activity summary">
+                <div class="circle-container">
+                    <div class="circle">
+                        <div class="outer-circle"></div>
+                        <div class="inner-circle"></div>
+                    </div>
+                    <div class="text-container">
+                        <p class="course-min"><span class="circle-dot orange-dot"></span> <strong>11</strong>/30 course min</p>
+                        <p class="visit"><span class="circle-dot green-dot"></span> <strong>4</strong>/1 visit</p>
+                        <p class="date-label">Oct 13 - 19</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="see-all-activity">See all activity</a>
+        </section>
+      
+        
+        <section class="courses-section">
+            <h1>Pick up where you left off</h1>
+            <a href="#" class="my-learning">My learning</a>
+            
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab-button active" aria-label="Courses">Courses</button>
+                <button class="tab-button" aria-label="Learning paths">Learning paths</button>
+                <button class="tab-button" aria-label="Certification preparation">Certification preparation</button>
+            </div>
+            
+            <!-- Tab content -->
+            <div class="tab-content">
+                <div id="courses" class="tab-pane active">
+                    <div class="course-list">
+                        <article class="course-item">
+                            <img src="img/course.jpg" alt="Introduction to Course" class="course-thumbnail">
+                            <div class="course-info">
+                                <p class="course-title">1. Introduction</p>
+                                <p class="course-details">Lecture • 1m</p>
+                            </div>
+                        </article>
+                        <article class="course-item">
+                            <img src="img/course.jpg" alt="Integration Introduction" class="course-thumbnail">
+                            <div class="course-info">
+                                <p class="course-title">2. Integration introduction</p>
+                                <p class="course-details">Lecture • 6m left</p>
+                            </div>
+                        </article>
+                        <article class="course-item">
+                            <img src="img/course.jpg" alt="Quiz and Questions" class="course-thumbnail">
+                            <div class="course-info">
+                                <p class="course-title">3. Quiz and Questions</p>
+                                <p class="course-details">Quiz • 9m questions</p>
+                            </div>
+                        </article>
+                        <article class="course-item">
+                            <video class="course-video" controls>
+                                <source src="img/Tổng quan về khóa học HTML CSS tại F8 - Học lập trình web cơ bản - Học được gì trong khóa học-.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="course-info">
+                                <p class="course-title">4. Course Video</p>
+                                <p class="course-details">Video Lecture • 20m</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+        
+                <div id="learning-paths" class="tab-pane">
+                    <p>Learning paths content goes here</p>
+                </div>
+        
+                <div id="certification-prep" class="tab-pane">
+                    <p>Certification preparation content goes here...</p>
+                </div>
+            </div>
+        </section>
+        
+        <div id="learning-paths" class="tab-pane">
+            <p>Learning paths content goes here...</p>
+        </div>
+
+        <div id="certification-prep" class="tab-pane">
+            <p>Certification preparation content goes here...</p>
+        </div>
+       
+    </div>
+    
+</section>
+
+        
+<section class="recommend-section">
+    <div class="recommend-header">
+        <h2>Based on your certification interests, we recommend</h2>
+        <a href="#" class="edit-certification">Edit certification</a>
+    </div>
+    <div class="recommend-list">
+        <article class="recommend-item">
+            <img src="img/java.jpg" alt="Oracle Certified Java Programmer">
+            <p>Oracle Certified Java Programmer</p>
+            <div class="rating">
+                <span class="rating-text">4.6</span>
+                <span class="stars" style="width: 92%;">★★★★★ (438)</span>
+            </div>
+        </article>
+        <article class="recommend-item">
+            <img src="img/java.jpg" alt="Oracle Java Certified - Associate 1Z0-808 Exam">
+            <p>Oracle Java Certified - Pass the Associate 1Z0-808 Exam</p>
+            <div class="rating">
+                <span class="rating-text">4.6</span>
+                <span class="stars" style="width: 92%;">★★★★★  (5,905)</span>
+            </div>
+        </article>
+        <article class="recommend-item">
+            <img src="img/java.jpg" alt="Java SE 8 Developer Bootcamp - OCA Prep">
+            <p>Complete Java SE 8 Developer Bootcamp - OCA Prep Included</p>
+            <div class="rating">
+                <span class="rating-text">4.6</span>
+                <span class="stars" style="width: 92%;">★★★★★  (9,726)</span>
+            </div>
+        </article>
+        <article class="recommend-item">
+            <img src="img/java.jpg" alt="Spring Professional Certification - Module 02">
+            <p>Spring Professional Certification Exam Tutorial - Module 02</p>
+            <div class="rating">
+                <span class="rating-text">4.6</span>
+                <span class="stars" style="width: 92%;">★★★★★  (1,121)</span>
+            </div>
+        </article>
+    </div>
+</section>
+
+        
+<section class="personalize-section">
+    <i class="fas fa-times close-icon"></i>
+    <i class="fas fa-user user-icon"></i>
+    <h2>Personalize your learning experience</h2>
+    <p>Add your occupation and interests to get better content recommendations</p>
+    <button>Add occupation and interests</button>
+</section>
+
+    </main>
+
+</body>
+</html>

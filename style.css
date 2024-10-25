@@ -1,0 +1,576 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f6f9;
+    color: #333;
+    font-size: 14px;
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////// */
+/* Navbar */
+
+nav {
+    background-color: #f0f4f8; /* Màu nền cho navbar */
+    padding: 10px 20px; /* Khoảng cách bên trong navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex; /* Hiển thị các phần tử theo hàng ngang */
+    list-style-type: none; /* Bỏ dấu đầu dòng */
+    padding: 0; /* Bỏ padding mặc định */
+    margin: 0; /* Bỏ margin mặc định */
+    gap: 15px;
+    justify-content: space-around; /* Căn giữa các phần tử với khoảng cách đều nhau */
+}
+
+nav ul li {
+    text-align: center; /* Căn giữa chữ trong mỗi phần tử */
+}
+
+nav ul li a {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: #333; /* Đặt màu chữ thành đen */
+    padding: 10px 0; /* Khoảng cách bên trong cho các link */
+    display: block; /* Đảm bảo link chiếm toàn bộ không gian của li */
+    font-size: 14px; 
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #3a7bd5; /* Màu chữ khi hover */
+    background-color: #e0f2ff; /* Thêm nền nhạt khi hover */
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Header */
+
+header {
+    background-color: #e6e6e6;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Tạo bóng cho header */
+}
+
+.welcome-section {
+
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    background-color: #5c6bc0;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+/*  */
+
+.streak-section, .courses-section, .recommend-section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px; /* Bo góc mềm mại hơn */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Bóng nhẹ hơn */
+    font-size: 14px;
+}
+
+.info-icon {
+    position: absolute; /* Để định vị ở góc trên bên phải */
+    top: 10px; /* Khoảng cách từ trên */
+    right: 10px; /* Khoảng cách từ bên phải */
+    border-radius: 50%; /* Để tạo hình tròn */
+    padding: 5px; /* Khoảng cách bên trong vòng tròn */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bóng nhẹ cho biểu tượng */
+    z-index: 1; /* Đảm bảo nó nằm trên các phần tử khác */
+}
+
+.info-icon i {
+    font-size: 14px; /* Kích thước biểu tượng */
+}
+
+
+.streak-section {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các khối */
+    padding: 10px;
+    background-color: #ffffff; /* Màu nền trắng */
+    border: 1px solid #ccc; /* Viền cho toàn bộ khung ngoài */
+    border-radius: 8px; /* Bo góc (tùy chọn) */
+    position: relative; /* Để định vị icon */
+}
+
+.weekly-streak,
+.current-streak,
+.activity-summary
+.streak-section {
+    flex: 1; 
+    padding: 15px;
+    background-color: #ffffff; /* Màu nền trắng */
+    text-align: left; /* Căn trái nội dung */
+    border-radius: 8px;
+}
+
+.current-streak {
+    display: flex;
+    align-items: center; /* Căn giữa icon và nội dung */
+}
+
+.current-streak i {
+    font-size: 35px; /* Tăng kích thước icon */
+    color: rgb(77, 10, 121); /* Đặt màu icon thành tím */
+    margin-right: 10px; /* Tạo khoảng cách giữa icon và nội dung */
+}
+
+
+.current-streak p {
+    margin: 0; /* Xóa margin để đảm bảo nội dung không quá xa */
+}
+
+.streak-number {
+    font-weight: bold;
+    font-size: 1.2em; /* Tăng kích thước chữ số */
+}
+
+.streak-label {
+    color: #666; /* Có thể thêm màu sắc cho nhãn này nếu muốn */
+    font-weight: normal;
+}
+
+.activity-summary {
+    display: flex;
+    flex-direction: column; /* Đặt các phần tử theo cột */
+    align-items: center;
+}
+
+.activity-summary {
+    display: flex;
+    flex-direction: column; /* Đặt các phần tử theo cột */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    margin: 0 auto; /* Tự động căn giữa */
+    max-width: 400px; /* Đặt chiều rộng tối đa */
+    padding: 20px; /* Khoảng cách bên trong khung */
+}
+
+.circle-container {
+    display: flex;
+    align-items: center; /* Căn giữa các phần tử trong vòng tròn */
+    margin-bottom: 8px; /* Khoảng cách giữa các hàng */
+}
+
+.circle {
+    width: 60px; /* Đường kính vòng tròn */
+    height: 60px; /* Đường kính vòng tròn */
+    border-radius: 50%; /* Đảm bảo hình dạng tròn */
+    background: conic-gradient(#ff4500 0%, #ff4500 36%, #d3d3d3 36%, #d3d3d3 100%); /* Màu cam 36% và màu xám còn lại */
+    margin-right: 12px; /* Khoảng cách giữa vòng tròn và nội dung */
+    position: relative; /* Để định vị vòng tròn con */
+    transition: transform 0.3s; /* Hiệu ứng khi hover */
+}
+
+.circle:hover {
+    transform: scale(1.1); /* Tăng kích thước khi hover */
+}
+
+.inner-circle {
+    width: 30px; /* Đường kính vòng tròn bên trong */
+    height: 30px; /* Đường kính vòng tròn bên trong */
+    border-radius: 50%; /* Đảm bảo hình dạng tròn */
+    background-color: #32CD32; /* Màu xanh lá */
+    position: absolute; /* Định vị vòng tròn bên trong */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Điều chỉnh vị trí để chính xác */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; /* Đặt các phần tử theo cột */
+    justify-content: center; /* Căn giữa văn bản dọc */
+}
+
+.course-min, .visit {
+    margin: 0; /* Xóa margin */
+}
+
+.course-min .circle-dot, .visit .circle-dot {
+    margin-right: 5px; /* Khoảng cách giữa dấu chấm và chữ */
+}
+
+.circle-dot {
+    display: inline-block;
+    width: 10px; /* Đường kính của chấm */
+    height: 10px; /* Đường kính của chấm */
+    border-radius: 50%; /* Đảm bảo hình dạng chấm tròn */
+}
+
+.orange-dot {
+    background-color: #ff4500; /* Màu chấm cam */
+}
+
+.green-dot {
+    background-color: #32CD32; /* Màu chấm xanh lá */
+}
+
+.date-label {
+    color: #666; 
+    font-weight: normal;
+    margin-top: 5px; /* Thêm khoảng cách trên */
+    margin-bottom: 0; /* Xóa khoảng cách dưới */
+}
+
+
+a {
+    margin-top: auto; /* Đẩy liên kết xuống đáy */
+    color: #007bff; /* Màu chữ cho liên kết */
+    text-decoration: none; 
+    align-self: flex-end; /* Căn phải cho liên kết */
+}
+
+a:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+.weekly-streak {
+    flex: 2;
+}
+
+
+
+
+/* Full-width section */
+.courses-section {
+    margin: 20px;
+    padding: 20px; /* Padding xung quanh */
+    text-align: left; /* Căn trái cho tiêu đề và nội dung */
+    overflow-x: auto; /* Thêm thanh trượt ngang */
+    position: relative; /* Định vị tương đối */
+    background: none; 
+    border: none; /* Không có viền */
+    color: inherit;
+}
+
+.my-learning {
+    position: absolute; /* Định vị tuyệt đối */
+    top: 50px; /* Khoảng cách từ trên cùng */
+    right: 20px; /* Khoảng cách từ bên phải */
+    text-decoration: none; 
+    font-size: 14px; /* Kích thước chữ */
+}
+
+.my-learning:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+/* Thanh trượt ngang cho danh sách khóa học */
+.course-list {
+    display: flex; /* Sử dụng flexbox cho danh sách */
+    justify-content: flex-start; /* Căn trái các mục trong danh sách */
+    gap: 20px; /* Khoảng cách giữa các phần tử */
+    text-align: left; /* Căn trái cho nội dung */
+    flex-wrap: nowrap; /* Không cho phép xuống dòng */
+}
+
+.course-thumbnail {
+    width: 80px; /* Kích thước hình ảnh/video */
+    height: 100px; /* Tự động điều chỉnh chiều cao */
+    margin-right: 15px; /* Khoảng cách bên phải */
+}
+.course-video {
+    width: 150px; /* Kích thước hình ảnh/video */
+    height: 100px; /* Tự động điều chỉnh chiều cao */
+    margin-right: 15px; /* Khoảng cách bên phải */
+}
+.course-info {
+    flex: 1; /* Để chiếm phần còn lại của hàng */
+}
+
+.course-title {
+    font-weight: bold; /* Chữ đậm cho tên */
+    margin: 0; /* Xóa margin */
+}
+
+.tab-button {
+    padding: 10px 20px; /* Padding cho nút */
+    margin: 0 10px; /* Khoảng cách giữa các nút */
+    background-color: transparent; /* Không có nền */
+    border: none; /* Không có viền */
+    border-radius: 5px; /* Bo góc cho nút */
+    cursor: pointer; /* Con trỏ khi hover vào nút */
+    font-size: 14px; /* Kích thước chữ */
+    color: black; /* Màu chữ đen */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu nền khi hover */
+}
+
+.tab-button:hover {
+    background-color: transparent; /* Không thay đổi màu nền khi hover */
+    color: #007bff; /* Màu chữ khi hover */
+}
+
+.tab-button.active {
+    color: #007bff; /* Màu chữ cho tab đang hoạt động */
+}
+
+/* Nội dung tab */
+.tab-content {
+    text-align: left; /* Căn trái cho nội dung tab */
+}
+
+.tab-pane {
+    display: none; /* Ẩn tất cả nội dung tab */
+}
+
+.tab-pane.active {
+    display: block; /* Chỉ hiển thị tab đang được chọn */
+}
+
+/* Course item */
+.course-item {
+    display: flex; /* Sắp xếp theo hàng */
+    flex: 0 0 auto; /* Ngăn không cho các mục co lại */
+    min-width: 350px; /* Đặt độ rộng tối thiểu cho các mục */
+    max-width: 350px; /* Đặt độ rộng tối đa */
+    text-align: left; /* Căn trái nội dung bên trong các mục khóa học */
+    padding: 15px; /* Padding cho mục khóa học */
+    background-color: #fafafa; /* Nền cho các mục khóa học */
+    border: 1px solid #e0e0e0; /* Viền cho mục khóa học */
+    border-radius: 6px; /* Bo góc cho mục khóa học */
+    box-sizing: border-box; /* Đảm bảo tính toán chiều rộng và chiều cao */
+    transition: box-shadow 0.3s ease; /* Hiệu ứng chuyển động */
+}
+
+.course-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Thêm bóng khi hover */
+}
+
+.course-item img {
+    max-width: 100%; /* Hình ảnh không vượt quá chiều rộng */
+    border-radius: 5px; /* Bo góc cho hình ảnh */
+    margin-bottom: 10px; /* Khoảng cách dưới hình ảnh */
+}
+
+.course-item p {
+    margin: 0; /* Xóa khoảng cách mặc định */
+    font-size: 14px; /* Kích thước chữ cho nội dung khóa học */
+    color: #555; /* Màu chữ cho nội dung khóa học */
+}
+
+.course-details {
+    margin-top: 10px; /* Khoảng cách trên cho chi tiết khóa học */
+    color: #666; /* Màu chữ cho chi tiết khóa học */
+    font-size: 12px; /* Kích thước chữ cho chi tiết khóa học */
+}
+
+.course-item p:first-child {
+    font-weight: bold; /* Chữ đậm cho tiêu đề khóa học */
+    margin-bottom: 5px; /* Khoảng cách dưới tiêu đề */
+}
+
+/*  */
+.recommend-section {
+    padding: 20px; /* Khoảng cách bên trong cho section */
+    background-color: #f7f8fa; /* Màu nền nhẹ */
+    border-radius: 8px; /* Bo góc cho section */
+    margin: 20px 0; /* Khoảng cách bên ngoài */
+    position: relative; /* Định vị tương đối */
+}
+
+.recommend-header {
+    display: flex; /* Sử dụng flexbox để sắp xếp hàng ngang */
+    justify-content: space-between; /* Căn chỉnh khoảng cách giữa các phần tử */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 10px;
+}
+
+.edit-certification {
+    position: absolute; /* Định vị tuyệt đối */
+    top: 50px; /* Khoảng cách từ trên cùng */
+    left: 650px; /* Khoảng cách từ bên phải */
+    text-decoration: none; /* Không gạch chân */
+    color: #007bff; /* Màu chữ */
+    font-size: 14px; /* Kích thước chữ */
+    
+
+}
+
+.edit-certification:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+}
+
+.recommend-section h2 {
+    text-align: left; /* Căn trái cho tiêu đề */
+    font-size: 24px; /* Kích thước chữ tiêu đề */
+    color: #333; /* Màu chữ cho tiêu đề */
+}
+
+.recommend-list {
+    display: flex; /* Sử dụng flexbox */
+    justify-content: flex-start; /* Căn trái các mục */
+    overflow-x: auto; /* Thêm thanh cuộn ngang nếu cần */
+    padding: 10px 0; /* Khoảng cách dọc */
+    gap: 20px; /* Khoảng cách giữa các item */
+}
+
+.recommend-item {
+    flex: 0 0 auto; /* Không cho phép co dãn */
+    min-width: 200px; /* Đặt chiều rộng tối thiểu cho mỗi item */
+    max-width: 200px; /* Đặt chiều rộng tối đa */
+    min-height: 200px;
+    max-height: 200px;
+    text-align: left; /* Căn trái cho nội dung bên trong */
+    background-color: #ffffff; /* Nền trắng cho mỗi item */
+    border: 1px solid #ddd; /* Viền cho mỗi item */
+    border-radius: 8px; /* Bo góc cho item */
+    padding: 15px; /* Padding cho item */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    transition: transform 0.2s; /* Hiệu ứng chuyển động khi hover */
+}
+
+.recommend-item:hover {
+    transform: scale(1.03);/* Phóng to item khi hover */
+}
+
+.recommend-item img {
+    max-width: 100%; /* Hình ảnh không vượt quá chiều rộng item */
+    max-height: 100%;
+    border-radius: 5px; /* Bo góc cho hình ảnh */
+    margin-bottom: 10px; /* Khoảng cách dưới hình ảnh */
+}
+
+.recommend-item p {
+    margin: 0; /* Xóa khoảng cách mặc định */
+    font-size: 14px; /* Kích thước chữ cho nội dung */
+    color: #555; /* Màu chữ cho nội dung */
+}
+
+.recommend-item p:first-child {
+    font-weight: bold; /* Chữ đậm cho tiêu đề khóa học */
+    margin-bottom: 5px; /* Khoảng cách dưới tiêu đề */
+}
+
+.rating {
+    display: flex;
+    align-items: center; /* Căn giữa dọc cho rating-text và stars */
+    gap: 5px; /* Khoảng cách giữa rating-text và stars */
+
+}
+
+.rating-text {
+    font-size: 14px;
+    color: #555;
+}
+
+.stars {
+    font-size: 14px;
+    color: #ddd; /* Màu trắng hoặc xám cho các sao chưa được đánh giá */
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    color: #555;
+}
+
+/* Phần sao vàng */
+.stars::before {
+    content: "★★★★★";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 10%); /* Phần này sẽ là 4.5 sao */
+    color: gold;
+    overflow: hidden;
+}
+
+
+.personalize-section {
+    box-sizing: border-box; /* Đảm bảo padding và border được tính vào chiều rộng */
+    width: calc(100% - 40px); /* Chiều rộng 100% trừ đi 40px để hụt vào 20px hai bên */
+    padding: 10px; /* Khoảng cách bên trong */
+    margin: 20px auto; /* Căn giữa khung và tạo khoảng cách trên dưới */
+    border: 1px dashed #ccc; /* Viền cho toàn bộ khung ngoài */
+    background-color: #f7f8fa; /* Màu nền nhẹ để đồng bộ */
+    border-radius: 8px; /* Bo góc */
+    text-align: center; /* Căn giữa nội dung */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    position: relative; 
+}
+
+
+.icon-wrapper {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%; /* Bo tròn nền */
+    padding: 15px; 
+}
+.user-icon {
+    width: 60px; /* Kích thước icon */
+    color: #dfbc23; 
+}
+
+.close-icon {
+    position: absolute; /* Định vị biểu tượng "x" */
+    top: 10px; /* Khoảng cách từ trên cùng */
+    right: 15px; /* Khoảng cách từ bên phải */
+    cursor: pointer; /* Hiển thị con trỏ khi di chuột */
+    font-size: 15px; /* Kích thước của biểu tượng "x" */
+    color: #ff0000; /* Màu đỏ cho biểu tượng "x" (có thể điều chỉnh) */
+}
+
+.personalize-section p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+.personalize-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 10px; /* Tạo khoảng cách với icon phía trên */
+}
+
+.personalize-section h3 {
+    font-size: 18px; /* Kích thước chữ cho tiêu đề phụ */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề phụ */
+}
+
+.personalize-section button {
+    padding: 10px 20px; /* Padding cho button */
+    font-size: 16px; /* Kích thước chữ cho button */
+    border: none; /* Không viền */
+    background-color: white; /* Nền trắng cho button */
+    color: #007bff; /* Màu chữ cho button */
+    border-radius: 5px; /* Bo tròn các góc button */
+    cursor: pointer; /* Thay đổi con trỏ khi di chuột */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+}
+
+.personalize-section button:hover {
+    background-color: #e7f0ff; /* Màu nền khi hover */
+}
+
+
+.personalize-section button {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.personalize-section button:hover {
+    background-color: #0056b3;
+}
